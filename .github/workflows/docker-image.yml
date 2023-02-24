@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/testdockerimage
+        run: docker build . --file ./ModularFactoryAPI/Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}/modular_factory_api
 
       - name: Docker Push
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/testdockerimage
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/modular_factory_api
