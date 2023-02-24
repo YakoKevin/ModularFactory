@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularFactoryInterface", "ModularFactoryInterface\ModularFactoryInterface.csproj", "{75277909-48CF-4F78-BD9C-2239652313CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularFactoryInterface", "ModularFactoryInterface\ModularFactoryInterface.csproj", "{75277909-48CF-4F78-BD9C-2239652313CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModularFactoryAPI", "ModularFactoryAPI\ModularFactoryAPI.csproj", "{EB129754-2FE1-49A9-8A0C-89380A667B1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModularFactoryAPI", "ModularFactoryAPI\ModularFactoryAPI.csproj", "{EB129754-2FE1-49A9-8A0C-89380A667B1F}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedModels", "SharedModels\SharedModels.shproj", "{2B061AA0-72F4-4566-8F89-18E2439BB12E}"
 EndProject

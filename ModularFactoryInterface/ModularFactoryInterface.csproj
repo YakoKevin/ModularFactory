@@ -7,6 +7,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Content Remove="Pages\TestPage.razor" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Blazor-ApexCharts" Version="0.9.18-beta" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.7" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.7" PrivateAssets="all" />
@@ -16,6 +20,18 @@
 	</ItemGroup>
 
 	<Import Project="..\SharedModels\SharedModels.projitems" Label="Shared" />
+
+	<ItemGroup>
+	  <UpToDateCheckInput Remove="Pages\TestPage.razor" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="Pages\TestPage.razor" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Pages\TestPage.razor" />
+	</ItemGroup>
 	
 	
 </Project>
