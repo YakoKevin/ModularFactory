@@ -1,0 +1,67 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime jsRuntime
+
+<MudThemeProvider Theme="SKFCustomTheme" @ref="@_mudThemeProvider" IsDarkMode=true />
+<!--<MudThemeProvider Theme="SKFCustomTheme" @ref="@_mudThemeProvider" @bind-IsDarkMode="@darkThemeEnabled" />-->
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="1">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">DashboardInterface</MudText>
+        </MudDrawerHeader>
+        <NavMenu />
+    </MudDrawer>
+    <MudMainContent>
+        @Body
+
+    </MudMainContent>
+</MudLayout>
+
+@code {
+
+    MudTheme SKFCustomTheme = SKFMudTheme();
+    MudThemeProvider? _mudThemeProvider;
+    bool _drawerOpen = false;
+    bool dense = false;
+    bool preserveOpenState = false;
+
+    bool darkThemeEnabled = false;
+    Breakpoint breakpoint = Breakpoint.Xl;
+
+    private static MudTheme SKFMudTheme()
+    {
+
+        var theme = new MudTheme();
+        var skfBlue = new MudBlazor.Utilities.MudColor("0f58d6");
+
+        theme.Palette.AppbarBackground = skfBlue;
+        theme.PaletteDark.AppbarBackground = skfBlue;
+
+        theme.LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "260px",
+                DrawerWidthRight = "300px"
+            }
+        ;
+
+        return theme;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+
+            darkThemeEnabled = await _mudThemeProvider.GetSystemPreference();
+            InvokeAsync(StateHasChanged);
+        }
+    }
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}

@@ -1,0 +1,54 @@
+﻿@page "/testsignalr"
+@using Microsoft.AspNetCore.SignalR.Client
+@using SharedModels.SvgModels;
+<h3>TestSignalR</h3>
+
+<div>
+    SignalR Status : @IsConnected
+    Status Updated On : @updatedOn
+</div>
+
+<h3>Incoming Messages</h3>
+
+@foreach (var str in stringList)
+{
+    <span>@str</span>
+}
+
+
+@code {
+    [Inject]
+    public HubConnection hubConnection { get; set; }
+
+    public List<Svg> empList;
+    public List<string> stringList = new List<string>();
+    public string updatedOn;
+
+    protected override async Task OnInitializedAsync()
+    {
+        empList = new List<Svg>();
+
+        hubConnection.On<Svg>("ReceiveEmployee", (incomingEmployee) =>
+        {
+            empList.Add(incomingEmployee);
+            updatedOn = DateTime.Now.ToLongTimeString();
+            StateHasChanged();
+        });
+
+        hubConnection.On<string, string>("ReceiveSvgConfiguration", (id, incomingMessage) =>
+        {
+            stringList.Add(incomingMessage);
+            updatedOn = DateTime.Now.ToLongTimeString();
+            StateHasChanged();
+        });
+
+        if (hubConnection.State == HubConnectionState.Disconnected)
+        {
+            await hubConnection.StartAsync();
+        }
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    public bool IsConnected => hubConnection?.State == HubConnectionState.Connected;
+}

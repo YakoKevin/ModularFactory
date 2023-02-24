@@ -1,0 +1,116 @@
+﻿@using System.Text.Json
+@using ApexCharts;
+@using Microsoft.AspNetCore.SignalR.Client;
+@using SharedModels.SvgModels;
+@inject IJSRuntime jsRuntime
+@inject HttpClient Http
+<MudPaper Height="@Height" Class="pa-1" Elevation="0" Style="background-color:#272c34ff">
+    <MudGrid Spacing="0">
+        <MudItem xs="12">
+            <MudPaper Class="pa-3" Style="background-color:#272c34ff">
+                        <MudText Style="font-size:3vh" Typo="Typo.body1">Aktuell modul</MudText>
+                        <MudText Style="font-size:2.5vw" Typo="Typo.h2">MODULNAMN</MudText>
+                        <MudProgressLinear Value="@(Double.Parse(Percent))" Max="1.0" Size="Size.Large" />
+                        <MudText Style="font-size:3vh" Typo="Typo.body1">
+                            Moduler 3 / 5
+                        </MudText>
+
+                    </MudPaper>
+        </MudItem>
+
+        <MudItem xs="12">
+<ApexChart TItem="TaktDataEntry" Title="Hej" XAxisType=XAxisType.Numeric Options=options @ref=chart>
+
+                <ApexPointSeries TItem="TaktDataEntry"
+                                 Items="TaktDataRRY4"
+                                 Name="Gr"
+                                 XValue="@(e => e.Time)"
+                                 YValue="@(e => e.Quantity)"
+                                 OrderByDescending="e=>e.X"
+                                 SeriesType="SeriesType.Bar"
+                                 />
+
+            </ApexChart>
+
+            <MudButton OnClick="@(async ()=>await chart.UpdateSeriesAsync(false))">Update</MudButton>
+            </MudItem>
+            </MudGrid>
+            </MudPaper>
+
+@code {
+    [Inject]
+    public HubConnection hubConnection { get; set; }
+    [Parameter] 
+    public string Height { get; set; }
+    [Parameter] 
+    public string Height2 { get; set; }
+
+    public string Percent { get; set; } = "0.7";
+    public List<Svg> empList;
+    public List<string> stringList = new List<string>();
+    public string updatedOn;
+
+    private ApexChart<TaktDataEntry> chart;
+
+    private class TaktDataEntry
+    {
+        public int Time { get; set; }
+        public decimal Quantity { get; set; }
+    }
+
+    private List<TaktDataEntry> TaktDataRRY4 = new List<TaktDataEntry>();
+    private ApexChartOptions<TaktDataEntry> options { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        empList = new List<Svg>();
+
+        hubConnection.On<Svg>("ReceiveEmployee", (incomingEmployee) =>
+        {
+            empList.Add(incomingEmployee);
+            updatedOn = DateTime.Now.ToLongTimeString();
+            StateHasChanged();
+        });
+
+        hubConnection.On<string>("ReceiveMessage", (incomingMessage) =>
+        {
+            stringList.Add(incomingMessage);
+            updatedOn = DateTime.Now.ToLongTimeString();
+            StateHasChanged();
+        });
+
+        if (hubConnection.State == HubConnectionState.Disconnected)
+        {
+            await hubConnection.StartAsync();
+        }
+
+
+
+   
+        
+
+
+        for (int i = 0; i < 50; i++)
+        {
+            TaktDataRRY4.Add(new TaktDataEntry()
+        {
+            Quantity = i*20,
+            Time = i
+        });
+        }
+        options = new ApexChartOptions<TaktDataEntry>
+            {
+                Xaxis = new XAxis { DecimalsInFloat = 0 },
+                Debug = true,
+                Theme = new Theme
+                {
+                    Mode = Mode.Dark,
+                    Palette = PaletteType.Palette4
+                }
+            };
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    public bool IsConnected => hubConnection?.State == HubConnectionState.Connected;
+}

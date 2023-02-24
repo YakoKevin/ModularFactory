@@ -1,0 +1,34 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.SignalR.Client;
+@using SharedModels.SvgModels;
+
+
+<MudPaper Square="true" Elevation="0" Class="pa-1" Height="100%" Style="margin-top:-55px">
+    <MudGrid Spacing="0">
+        <MudItem xs="3">
+            <MudGrid Spacing="1">
+                <MudItem xs="12">
+                    <ModularFactoryInterface.Components.Overview Height="97.9vh" Height2="30vh"/>
+                </MudItem>
+            </MudGrid>
+        </MudItem>
+        <MudItem xs="6">
+            <MudGrid Spacing="1" Justify="Justify.Center">
+                <MudItem xs="12">
+                    <ModularFactoryInterface.Components.Layout Height="97.9vh"/>
+                </MudItem>
+            </MudGrid>
+        </MudItem>
+        <MudItem xs="3">
+            <MudGrid Spacing="1">
+                <MudItem xs="12">
+                    <ModularFactoryInterface.Components.Carousel Height="97.9vh"/>
+                </MudItem>
+            </MudGrid>
+        </MudItem>
+    </MudGrid>
+</MudPaper>
+
+
+@code {
+}

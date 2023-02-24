@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>2b061aa0-72f4-4566-8f89-18e2439bb12e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedModels</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)SvgModels\ChartsData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SvgModels\G.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SvgModels\Line.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SvgModels\Rect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SvgModels\Svg.cs" />
+  </ItemGroup>
+</Project>

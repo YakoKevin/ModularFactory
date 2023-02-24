@@ -1,0 +1,41 @@
+﻿@using ModularFactoryInterface.IServices;
+@using SharedModels.SvgModels;
+@using System.Text.Json;
+@using Microsoft.AspNetCore.SignalR.Client;
+
+<MudPaper Height="@Height" Class="ma-0 pa-2 svg-wrapper flex-1 d-flex" Style="justify-content:center; background-color:#272c34ff;" Elevation="0">
+    <svg version="1.1" id="svg_superunique" viewBox=@svgs.viewBox preserveAspectRatio="none">
+        @foreach (var g in svgs.rect)
+        {
+            <rect x=@g.x y=@g.y width=@g.width height=@g.height style=@g.style) />
+        }
+    </svg>
+
+</MudPaper>
+
+@code {
+    [Parameter]
+    public string Height { get; set; }
+    [Inject]
+    public ISvgService _svgService { get; set; }
+    [Inject]
+    public HubConnection hubConnection { get; set; }
+
+    public Svg svgs { get; set; } = new Svg();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var jsonString = await _svgService.GetSvgAsObject();
+        svgs = JsonSerializer.Deserialize<Svg>(jsonString);
+
+        hubConnection.On<string, string>("ReceiveSvgConfiguration", (id, color) =>
+        {
+            InvokeAsync(StateHasChanged);
+        });
+
+        if (hubConnection.State == HubConnectionState.Disconnected)
+        {
+            await hubConnection.StartAsync();
+        }
+    }
+}
