@@ -1,0 +1,81 @@
+﻿@page "/"
+@inject NavigationManager NavManager
+@inherits LayoutComponentBase
+
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0" Dense="@dense">
+
+        <MudImage Style="height:20px; padding-left: 12px;" Src="Images/SKFLogo.png"></MudImage>
+
+        <MudText Style="font-size:15px; margin-left:20px; font-weight:500; color:white" Typo="Typo.h1">Modular Factory</MudText>
+        <MudSpacer />
+        <MudHidden Breakpoint="Breakpoint.SmAndUp" Invert="true">
+
+
+        </MudHidden>
+    </MudAppBar>
+
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Large" Class="my-16 pt-16">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+
+
+
+<MudGrid Justify="Justify.Center">
+    <MudPaper Width="100vh" Height="50vh" Style="margin-top:-100px">
+        <MudText Style="margin-bottom:10px; margin-left:10px; margin-top:10px; color:white; font-size:3vh">Pages</MudText>
+
+        <MudButton Style="background-color:#46D329; height:5vh; width:100vh;" OnClick="((x) => Redirect(PathToModularFactory))">
+            <MudText Align="Align.Center" Style="color:white; font-size:3vh">Modular Factory</MudText>
+        </MudButton>
+
+        <MudButton Style="background-color:#46D329; height:5vh; width:100vh; margin-top:15px" OnClick="((x) => Redirect(PathToTestSignalR))">
+            <MudText Align="Align.Center" Style="color:white; font-size:3vh">Test SignalR</MudText>
+        </MudButton>
+    </MudPaper>
+
+</MudGrid>
+@code {
+    public string PathToModularFactory { get; set; } = "/dashboard";
+    public string PathToTestSignalR { get; set; } = "/testsignalr";
+
+    bool _drawerOpen = false;
+    bool dense = false;
+    MudTheme SKFCustomTheme = SKFMudTheme();
+    MudThemeProvider? _mudThemeProvider;
+
+    public void Redirect(string path)
+    {
+        NavManager.NavigateTo(path);
+    }
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+    private static MudTheme SKFMudTheme()
+    {
+        var theme = new MudTheme();
+        var skfBlue = new MudBlazor.Utilities.MudColor("0f58d6");
+
+        theme.Palette.AppbarBackground = skfBlue;
+        theme.PaletteDark.AppbarBackground = skfBlue;
+
+        theme.LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "260px",
+                DrawerWidthRight = "300px"
+            }
+        ;
+
+        return theme;
+    }
+
+}
