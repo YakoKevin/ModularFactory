@@ -29,7 +29,7 @@ namespace ModularFactoryAPI.Services.SvgAndXmlServices
 
         public string xmlAsString()
         {
-            string path = @"SvgFiles\ModularFactorySVG.svg";
+            string path = @"SvgFiles/ModularFactorySVG.svg";
             string xmlString = File.ReadAllText(path);
 
             return xmlString;
