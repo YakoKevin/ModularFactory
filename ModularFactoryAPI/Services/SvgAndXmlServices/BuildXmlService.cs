@@ -6,7 +6,7 @@ namespace ModularFactoryAPI.Services.SvgAndXmlServices
 {
     public class BuildXmlService : IBuildXmlService
     {
-        private string SvgDirectory => System.IO.Path.Combine(".", "SVGFiles");
+        private string SvgDirectory => System.IO.Path.Combine(".", "SvgFiles");
 
         public string SvgPath(string productionChannel)
         {
@@ -29,7 +29,7 @@ namespace ModularFactoryAPI.Services.SvgAndXmlServices
 
         public string xmlAsString()
         {
-            string path = @"SVGFiles\ModularFactorySVG.svg";
+            string path = @"SvgFiles\ModularFactorySVG.svg";
             string xmlString = File.ReadAllText(path);
 
             return xmlString;
