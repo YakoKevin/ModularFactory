@@ -3,6 +3,54 @@
 @using SharedModels.SvgModels;
 
 
+<MudGrid Spacing="1">
+    @* Column 1 *@
+    <MudItem xs="12" md="3" Class="pt-0">
+        <MudGrid Spacing="1">
+            <MudItem xs="12">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="18vh">
+                    <ModularFactoryInterface.Components.ProducedStatus />
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+    @* Column 2 *@
+    <MudItem xs="12" md="3" Class="pt-0">
+        <MudGrid Spacing="1">
+            <MudItem xs="12">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="11vh">
+
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+    @* Column 3 *@
+    <MudItem xs="12" md="3" Class="pt-0">
+        <MudGrid Spacing="1">
+            <MudItem xs="12">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="11vh">
+
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+
+    @* Column 4 *@
+    <MudItem xs="12" md="3" Class="pt-0">
+        <MudGrid Spacing="1">
+            <MudItem xs="12" Class="pt-0">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="97.9vh">
+                    <ModularFactoryInterface.Components.Svgs.ModularFactoryOverview />
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </MudItem>
+</MudGrid>
+
+
+
+@code {
+    /*
 <MudPaper Square="true" Elevation="0" Class="pa-1" Height="100%" Style="margin-top:-55px">
     <MudGrid Spacing="0">
         <MudItem xs="3">
@@ -28,7 +76,5 @@
         </MudItem>
     </MudGrid>
 </MudPaper>
-
-
-@code {
+    */
 }

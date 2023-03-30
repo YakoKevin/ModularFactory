@@ -224,19 +224,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bt2535\\.nuget\\packages\\": {}
+    "C:\\Users\\yakok\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bt2535\\Desktop\\ModularFactory\\ModularFactoryAPI\\ModularFactoryAPI.csproj",
+      "projectUniqueName": "C:\\Users\\yakok\\Desktop\\ModularFactory\\ModularFactoryAPI\\ModularFactoryAPI.csproj",
       "projectName": "ModularFactoryAPI",
-      "projectPath": "C:\\Users\\bt2535\\Desktop\\ModularFactory\\ModularFactoryAPI\\ModularFactoryAPI.csproj",
-      "packagesPath": "C:\\Users\\bt2535\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bt2535\\Desktop\\ModularFactory\\ModularFactoryAPI\\obj\\",
+      "projectPath": "C:\\Users\\yakok\\Desktop\\ModularFactory\\ModularFactoryAPI\\ModularFactoryAPI.csproj",
+      "packagesPath": "C:\\Users\\yakok\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yakok\\Desktop\\ModularFactory\\ModularFactoryAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\bt2535\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yakok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -244,6 +249,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -286,7 +292,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

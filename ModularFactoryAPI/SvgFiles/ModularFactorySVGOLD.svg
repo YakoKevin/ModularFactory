@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8.946" y="8.045" width="393.074" height="329.391" style="stroke: rgb(255, 183, 0); paint-order: fill; stroke-width: 3px; fill: #272c34ff;"/>
+  <rect x="165.098" y="53.093" width="71.021" height="73.052" style="fill: rgb(223, 223, 223); stroke-width: 2px; stroke: rgb(84, 90, 255);" id="1"/>
+  <rect x="167.703" y="211.952" width="71.234" height="75.036" style="fill: rgb(223, 223, 223); stroke: rgb(84, 90, 255); stroke-width: 2px;" id="2"/>
+  <rect x="272.433" y="132.523" width="72.309" height="71.188" style="fill: rgb(223, 223, 223); stroke: rgb(84, 90, 255); stroke-width: 2px;" id="3"/>
+  <rect x="60.548" y="131.827" width="73.474" height="71.232" style="fill: rgb(223, 223, 223); stroke: rgb(84, 90, 255); stroke-width: 2px;" id="4"/>
+  <ellipse style="fill: rgb(223, 223, 223); stroke: rgb(255, 96, 96);" cx="202.1" cy="167.261" rx="36.906" ry="25.869"/>
+  <rect x="22.011" y="20.49" width="8.121" height="300.949" style="stroke: rgb(0, 0, 0); fill: rgb(185, 185, 185);"/>
+  <rect x="29.599" y="311.782" width="351.126" height="9.658" style="stroke: rgb(0, 0, 0); fill: rgb(185, 185, 185);"/>
+  <rect x="372.446" y="22.051" width="8.278" height="289.73" style="stroke: rgb(0, 0, 0); fill: rgb(185, 185, 185);"/>
+  <rect x="30.506" y="21.519" width="340.875" height="9.658" style="stroke: rgb(0, 0, 0); fill: rgb(185, 185, 185);"/>
+</svg>
