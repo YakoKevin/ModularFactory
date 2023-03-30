@@ -9,61 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = ModularFactoryInterface
 build_property.RootNamespace = ModularFactoryInterface
-build_property.ProjectDir = C:\Users\yakok\Desktop\ModularFactory\ModularFactoryInterface\
+build_property.ProjectDir = C:\Users\bt2535\Desktop\ModularFactory\ModularFactoryInterface\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\yakok\Desktop\ModularFactory\ModularFactoryInterface
+build_property.MSBuildProjectDirectory = C:\Users\bt2535\Desktop\ModularFactory\ModularFactoryInterface
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/App.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Components/Carousel.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Components/Carousel.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJvdXNlbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Components/Grafana.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Components/Grafana.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHcmFmYW5hLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Components/Layout.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Components/Layout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Components/Overview.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Components/Orders.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPcmRlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Components/Overview.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPdmVydmlldy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Components/ProducedStatus.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Components/ProducedStatus.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWNlZFN0YXR1cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Components/Svgs/ModularFactoryOverview.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Components/Svgs/ModularFactoryOverview.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTdmdzXE1vZHVsYXJGYWN0b3J5T3ZlcnZpZXcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Pages/Dashboard.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Pages/StartPage.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Pages/StartPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhcnRQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Pages/TestSignalR.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Pages/TestSignalR.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdFNpZ25hbFIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Shared/MainLayout.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/Shared/NavMenu.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yakok/Desktop/ModularFactory/ModularFactoryInterface/_Imports.razor]
+[C:/Users/bt2535/Desktop/ModularFactory/ModularFactoryInterface/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

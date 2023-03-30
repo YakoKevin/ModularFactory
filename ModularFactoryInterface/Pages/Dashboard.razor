@@ -3,43 +3,53 @@
 @using SharedModels.SvgModels;
 
 
-<MudGrid Spacing="1">
+<MudGrid Spacing="1" Style="margin-top:-55px">
     @* Column 1 *@
-    <MudItem xs="12" md="3" Class="pt-0">
+    <MudItem xs="12" md="4" Class="pt-0">
         <MudGrid Spacing="1">
             <MudItem xs="12">
-                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="18vh">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="20vh">
                     <ModularFactoryInterface.Components.ProducedStatus />
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="38vh">
+                    <ModularFactoryInterface.Components.Grafana GraphURL="https://got-grafana.prd.se11g.skf.io/d-solo/lS8F20-4z/rry4-hourly-production?orgId=1&from=1679885635762&to=1679907235762&panelId=4&refresh=1m&from=now-1h&to=now" />
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="38vh">
+                    <ModularFactoryInterface.Components.Grafana GraphURL="https://got-grafana.prd.se11g.skf.io/d-solo/4bI5_nB4k/rry5-hourly-production?orgId=1&from=1680155411781&to=1680177011781&panelId=4&refresh=1m&from=now-1h&to=now" />
                 </MudPaper>
             </MudItem>
         </MudGrid>
     </MudItem>
     @* Column 2 *@
-    <MudItem xs="12" md="3" Class="pt-0">
+    <MudItem xs="12" md="4" Class="pt-0">
         <MudGrid Spacing="1">
             <MudItem xs="12">
-                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="11vh">
-
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="20vh">
+                    <ModularFactoryInterface.Components.Orders />
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="38vh">
+                    <ModularFactoryInterface.Components.Grafana GraphURL="https://got-grafana.prd.se11g.skf.io/d-solo/4bI5_nB4k/rry5-hourly-production?orgId=1&from=1679892530430&to=1679914130430&panelId=10&refresh=1m&from=now-24h&to=now" />
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="38vh">
+                    <ModularFactoryInterface.Components.Grafana GraphURL="https://got-grafana.prd.se11g.skf.io/d-solo/4bI5_nB4k/rry5-hourly-production?orgId=1&from=1679892530430&to=1679914130430&panelId=10&refresh=1m&from=now-24h&to=now" />
                 </MudPaper>
             </MudItem>
         </MudGrid>
     </MudItem>
+
     @* Column 3 *@
-    <MudItem xs="12" md="3" Class="pt-0">
-        <MudGrid Spacing="1">
-            <MudItem xs="12">
-                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="11vh">
-
-                </MudPaper>
-            </MudItem>
-        </MudGrid>
-    </MudItem>
-
-    @* Column 4 *@
-    <MudItem xs="12" md="3" Class="pt-0">
-        <MudGrid Spacing="1">
+    <MudItem xs="12" md="4" Class="pt-0">
+        <MudGrid Spacing="0">
             <MudItem xs="12" Class="pt-0">
-                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1 mb-0" Height="97.9vh">
+                <MudPaper Class="d-flex flex-column align-center justify-start mud-width-full py-1" Height="97.5vh">
                     <ModularFactoryInterface.Components.Svgs.ModularFactoryOverview />
                 </MudPaper>
             </MudItem>
