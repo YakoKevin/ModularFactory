@@ -8,3 +8,4 @@ WORKDIR /var/www/web
 COPY --from=build-env /src/output/wwwroot .
 COPY ./ModularFactoryInterface/nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
+EXPOSE 1990
